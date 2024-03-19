@@ -10,12 +10,6 @@
   margin-bottom: 40px;
 }
 
-.unity {
-  width: 100%;
-  height: 160px;
-  background-color: azure;
-}
-
 .kick {
   display: flex;
   height: 600px;

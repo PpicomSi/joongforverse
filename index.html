@@ -8,6 +8,7 @@
 
 </head>
 <body onload="openNewChromeWindow()">
+
   <script src="Build/Build.loader.js"></script>
 
   <script>
@@ -23,12 +24,11 @@
       }
   </script>
   <div class="main-wrapper">
-    <div class="unity">
-      unity webgl
-    </div>    
+    <canvas id="unity-canvas" width=1280 height=128 tabindex="-1" style="width: 1280px; height: 128px; background: #FFFFFF"></canvas>
+
     <script>
       // 유니티 인스턴스를 생성합니다.
-      var gameInstance = createUnityInstance("unity", {
+      var gameInstance = createUnityInstance(document.querySelector("#unity-canvas"), {
             dataUrl: "Build/Build.data",
             frameworkUrl: "Build/Build.framework.js",
             codeUrl: "Build/Build.wasm",
