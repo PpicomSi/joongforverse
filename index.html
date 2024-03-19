@@ -40,15 +40,27 @@
             // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
         });
   </script>
-    <div class="kick">
-      <iframe 
-          class="kick-stream"
-          src="https://player.kick.com/joongforone" 
-          frameborder="0" 
-          scrolling="no" 
-          allowfullscreen="true"> 
-      </iframe>
-    </div>
+  <div class="kick">
+    <iframe id="kick-stream"
+            class="kick-stream"
+            src="https://player.kick.com/joongforone" 
+            frameborder="0" 
+            scrolling="no" 
+            allowfullscreen="true"> 
+    </iframe>
   </div>
+
+  <button onclick="changeSrc('https://player.kick.com/joongforone')">중포원</button>
+  <button onclick="changeSrc('https://player.kick.com/septwo')">세븐투</button>
+  <button onclick="changeSrc('https://player.kick.com/joongforall')">중포올</button>
+  <button onclick="changeSrc('https://player.kick.com/pokapoka-picnic-club')">키라라</button>
+
+  <script>
+  function changeSrc(newSrc) {
+    var iframe = document.getElementById('kick-stream');
+    iframe.src = newSrc;
+  }
+  </script>
+    </div>
 </body>
 </html>
