@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
   <title>중아이고</title>
+
 </head>
 <body onload="openNewChromeWindow()">
+  <script src="Build/Build.loader.js"></script>
 
   <script>
       function openNewChromeWindow() {
@@ -23,21 +25,21 @@
   <div class="main-wrapper">
     <div class="unity">
       unity webgl
-    </div>
-    <script src="Build/Build.loader.js"></script>
+    </div>    
     <script>
-        createUnityInstance("unity", {
-          dataUrl: "Build/Build.data",
-          frameworkUrl: "Build/Build.framework.js",
-          codeUrl: "Build/Build.wasm",
-          streamingAssetsUrl: "StreamingAssets",
-          companyName: "DefaultCompany",
-          productName: "JoonForVerse",
-          productVersion: "1.0",
-          // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-          // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      // 유니티 인스턴스를 생성합니다.
+      var gameInstance = createUnityInstance("unity", {
+            dataUrl: "Build/Build.data",
+            frameworkUrl: "Build/Build.framework.js",
+            codeUrl: "Build/Build.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "DefaultCompany",
+            productName: "JoonForVerse",
+            productVersion: "1.0",
+            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
         });
-    </script>
+  </script>
     <div class="kick">
       <iframe 
           class="kick-stream"
