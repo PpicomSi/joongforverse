@@ -22,11 +22,6 @@
 }
 
 .kick-stream {
-  width: 80%;
+  width: 100%;
   background-color: rgb(167, 255, 207);
-}
-
-.kick-chat {
-  width: 20%;
-  background-color: rgb(255, 162, 250);
 }

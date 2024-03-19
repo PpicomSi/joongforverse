@@ -4,9 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
-  <title>cubo</title>
+  <title>중아이고</title>
 </head>
-<body>
+<body onload="openNewChromeWindow()">
+
+  <script>
+      function openNewChromeWindow() {
+          var url = "https://kick.com/joongforone/chatroom";
+          var features = "height=900,width=400,resizable=yes,scrollbars=yes,status=yes";
+          var chromeWin = window.open(url, "_blank", features);
+  
+          // Check if window is null, which indicates popup blocked
+          if (chromeWin == null || typeof(chromeWin) == 'undefined') {
+              alert("팝업 차단이 감지되었습니다. 팝업 차단을 해제하고 다시 시도해주세요.");
+          }
+      }
+  </script>
+  <script src="Build/Build.loader.js"></script>
+  <script>
+      createUnityInstance("unity", {
+        dataUrl: "Build/Build.data",
+        frameworkUrl: "Build/Build.framework.js",
+        codeUrl: "Build/Build.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "JoonForVerse",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+  </script>
   <div class="main-wrapper">
     <div class="unity">
       unity webgl
@@ -18,10 +45,6 @@
           frameborder="0" 
           scrolling="no" 
           allowfullscreen="true"> 
-      </iframe>
-      <iframe src="https://kick.com/joongforone/chatroom"
-        class="kick-chat"
-        frameborder="0">
       </iframe>
     </div>
   </div>
