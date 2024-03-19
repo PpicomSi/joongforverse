@@ -20,24 +20,24 @@
           }
       }
   </script>
-  <script src="Build/Build.loader.js"></script>
-  <script>
-      createUnityInstance("unity", {
-        dataUrl: "Build/Build.data",
-        frameworkUrl: "Build/Build.framework.js",
-        codeUrl: "Build/Build.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "JoonForVerse",
-        productVersion: "1.0",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-  </script>
   <div class="main-wrapper">
     <div class="unity">
       unity webgl
     </div>
+    <script src="Build/Build.loader.js"></script>
+    <script>
+        createUnityInstance("unity", {
+          dataUrl: "Build/Build.data",
+          frameworkUrl: "Build/Build.framework.js",
+          codeUrl: "Build/Build.wasm",
+          streamingAssetsUrl: "StreamingAssets",
+          companyName: "DefaultCompany",
+          productName: "JoonForVerse",
+          productVersion: "1.0",
+          // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+          // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+        });
+    </script>
     <div class="kick">
       <iframe 
           class="kick-stream"
