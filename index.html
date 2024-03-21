@@ -7,22 +7,10 @@
   <title>중아이고</title>
 
 </head>
-<body onload="openNewChromeWindow()">
-
+<body>
   <script src="Build/Build.loader.js"></script>
 
-  <script>
-      function openNewChromeWindow() {
-          var url = "https://kick.com/joongforone/chatroom";
-          var features = "height=900,width=400,resizable=yes,scrollbars=yes,status=yes";
-          var chromeWin = window.open(url, "_blank", features);
-  
-          // Check if window is null, which indicates popup blocked
-          if (chromeWin == null || typeof(chromeWin) == 'undefined') {
-              alert("팝업 차단이 감지되었습니다. 팝업 차단을 해제하고 다시 시도해주세요.");
-          }
-      }
-  </script>
+
   <div class="main-wrapper">
     <canvas id="unity-canvas" width=1280 height=128 tabindex="-1" style="width: 1280px; height: 128px; background: #FFFFFF"></canvas>
 
